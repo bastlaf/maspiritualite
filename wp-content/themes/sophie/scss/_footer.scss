@@ -1,0 +1,86 @@
+footer {
+    width: 100vw;
+    position: relative;
+    background-color: #231c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    .boxTextFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        img {
+            height: 8rem;
+            max-width: 15rem;
+            margin-bottom: 2rem;
+        }
+        .boxHoraire {
+            margin-bottom: 1rem;
+            text-align: center;
+            .footerJour {
+                font-family: 'Lora', serif;
+                font-size: 1.2rem;
+                color: rgb(214, 173, 223);
+            }
+            .footerHeure {
+                font-family: 'Lora', serif;
+                font-size: 1rem;
+                color: white;
+            }
+        }
+    }
+    .BoxMention {
+        width: 100%;
+        border-top: 1px solid rgb(53, 45, 61);
+        display: flex;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            color: rgb(107, 77, 135);
+            margin-top: 1rem;
+            font-family: 'Lora', serif;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+#cookie-law-info-bar {
+    padding: 1rem 2rem !important;
+    box-shadow: 0px 0px 12px -3px rgb(0, 0, 0); 
+    font-family: 'Lora', serif;   
+    margin: -60px auto !important;
+    .cli_messagebar_head {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 120%;
+      line-height: 1.15;
+      margin: 0.5rem;
+      font-family: 'Lora', serif;   
+    }
+    .cli-bar-container,
+    .cli-bar-btn_container {
+      margin-left: 0;
+      flex-direction: column;
+      line-height: 1.15;
+      a {
+        padding: 1rem;
+        font-family: 'Lora', serif;   
+      }
+    }
+  
+    .cli-bar-btn_container {
+      div:last-child {
+        margin-top: 0.5rem;
+        a {
+          display: inline !important;
+          font-weight: 400;
+          text-decoration: none;
+          font-family: 'Lora', serif;   
+        }
+      }
+    }
+  }
+  

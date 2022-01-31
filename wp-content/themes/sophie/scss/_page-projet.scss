@@ -1,0 +1,101 @@
+.SectionProjet1 {
+    width: 100%;
+    padding: 5rem 2rem 0 2rem;
+
+    // background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8rem 0 0 0;
+    position: relative;
+    .boxSectionProjet1 {
+        width: 72rem;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // background-color: brown;
+        .textProjet {
+            width: 35rem;
+            min-height: 45rem;
+            h2 {
+                font-family: 'DM Serif Display', serif;
+                font-weight: 400;
+                font-size: 3.6rem;
+                color: rgb(0, 0, 0);
+                position: relative;
+                z-index: 5;
+                padding-bottom: 1rem;
+                margin-bottom: 5rem;
+                height: fit-content;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    content: "";
+                    min-width: 10rem;
+                    height: 1px;
+                    background-color: rgb(0, 0, 0);
+                }
+            }
+            p {
+                font-family: 'Lora', serif;
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+                line-height: 35px;
+            }
+        }
+        .imgsProjet {
+            width: 35rem;
+            min-height: 45rem;
+            position: relative;
+            .photoProjet1 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 25rem;
+                z-index: 2;
+            }
+            .photoProjet2 {
+                position: absolute;
+                top: 10rem;
+                left: 0;
+                width: 25rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .SectionProjet1 .boxSectionProjet1 {
+        justify-content: center;
+    }
+    .SectionProjet1 .boxSectionProjet1 .imgsProjet {
+        margin-top: 3rem;
+    }
+    .SectionProjet1 .boxSectionProjet1 .textProjet {
+        text-align: center;
+    }
+    .SectionProjet1 .boxSectionProjet1 .textProjet h2::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SectionProjet1 .boxSectionProjet1 .imgsProjet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .SectionProjet1 .boxSectionProjet1 .imgsProjet .photoProjet1 {
+        position: initial;
+        margin-bottom: 2rem;
+    }
+    .SectionProjet1 .boxSectionProjet1 .imgsProjet .photoProjet2 {
+        position: initial;
+    }
+}

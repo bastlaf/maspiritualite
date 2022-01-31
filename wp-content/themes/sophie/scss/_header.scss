@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Luminari";
+    src: url(../font/Luminari-Regular.ttf);
+}
+@font-face {
+    font-family: "averia";
+    src: url(../font/AveriaSerif-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+body {
+    width: 100vw;
+}
+
+
+
+
+
+header {
+    height: 5rem;
+    width: 100vw;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .opacity {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.639);
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+    }
+    .opacity2 {
+        opacity: 1;
+        transition:  all 0.2s ease-in-out;
+        pointer-events: initial;
+    }
+    .boxHeader100 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        z-index: 200;
+        .boxHeader {
+            width: 100%;
+            height: 100%;
+            // max-width: 72rem;
+            margin: 0 5rem;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            img {
+                position: relative;
+                // z-index: 2;
+                height: 3.5rem;
+                max-width: 15rem;
+                margin-left: 1.5rem;
+            }
+            .menu {
+                height: 100%;
+                display: flex;
+                // justify-content: flex-end;
+                // background-color: rgb(238, 238, 1);
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    li {
+                        margin: 0 1rem;
+                        padding: 0;
+                        text-indent: 0;
+                        list-style-type: 0;
+                        list-style: none;
+                        position: relative;
+                        // &::before {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 0;
+                        //     right: -1rem;
+                        //     width: 1px;
+                        //     height: 100%;
+                        //     background-color: rgb(97, 98, 97);
+                            
+                        // }
+                        // &:last-child::before {display: none;}
+                        a {
+                            color:rgb(142, 142, 142);
+                            font-family: 'Poiret One', cursive;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            text-decoration: none;
+                            transition: all 0.2s ease-in-out;
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .logoHamburger {
+            display: none;
+            margin-right: 2rem;
+            right: 10px;
+            top: 10px;
+            height: 3rem;
+            width: 3rem;
+            z-index: 990;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: unset;
+            border: none;
+            outline: none;
+            // background-color: black;
+            span {
+                position: relative;
+                margin: 2px 0;
+                background-color: rgb(141, 110, 174);
+                width: 30px;
+                height: 3px;
+                border-radius: 5px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .menuResp {
+            display: none;
+            width: 20rem;
+            height: 100vh;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: -20rem;
+            z-index: 900;
+            background-color: rgb(226, 210, 243);
+            transition: all 0.3s ease-in-out;
+            ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                
+                margin: 10rem 0 20rem 0;
+                align-items: center;
+                li {
+                    list-style: none;
+                    position: relative;
+                    // font-family: "Lora";
+                    // font-size: 1.2rem;
+                    text-decoration: none;
+                    font-family: 'Poiret One', cursive;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    color: rgb(255, 255, 255);
+                    margin-bottom: 3rem;
+                    a {
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btnMenuResp--active {
+
+    #span1 {
+        transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    }
+    #span2 {
+        opacity: 0;
+    }
+    #span3 {
+        transform: rotate(45deg) translateY(-5px) translateX(-5px);
+    }
+    
+}
+header .navFixed {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    height: 5rem;
+    z-index: 50;
+    -webkit-box-shadow: 0px -10px 14px 3px rgb(0, 0, 0);
+    -moz-box-shadow: 0px -10px 14px 3px rgb(0, 0, 0);
+    box-shadow: 0px -10px 14px 3px rgb(0, 0, 0);    
+    animation: nav 0.7s ease-in-out;
+    animation-fill-mode: forwards ;
+}
+.current-menu-item::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(55, 29, 95);
+}
+@keyframes nav {
+    from {
+      top: -6rem;
+    }
+    to {
+      top: 0rem;
+    }
+} 
+@media screen and (max-width: 1100px) {
+    header .boxHeader100 .boxHeader {
+         margin: 0;
+     }
+    header .boxHeader100 .boxHeader .menu {
+        display: none;
+    }
+    header .boxHeader100 .menuResp {
+        display: flex;
+    }
+    header .boxHeader100 .logoHamburger {
+        display: flex;
+    }
+}
+
+
+header .boxHeader100 .boxHeader .menu ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+header .boxHeader100 .boxHeader .menu ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+
+
+header .boxHeader100 .boxHeader .menu ul .current-menu-item a:hover::before {
+    content: unset;
+}
